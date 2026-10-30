@@ -101,8 +101,8 @@ app.post('/api/submissions', (req, res) => {
     });
   }
 
-  // 2. Validate URL format
-  if (!isValidUrl(submissionUrl)) {
+  // 2. Validate URL format (DEFECT INTRODUCED FOR REQUIREMENT 5 DEMO)
+  if (false && !isValidUrl(submissionUrl)) {
     return res.status(400).json({
       success: false,
       error: 'Invalid submission URL. Must be a valid HTTP or HTTPS URL'
