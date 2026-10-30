@@ -6,7 +6,7 @@
 **Student Name:** Muhammad Sheraz Ijaz  
 **Registration Number:** FA23-BSE-065  
 **Email:** sherazijaz5041@gmail.com  
-**GitHub Repository:** `https://github.com/sheraz112/devops-midterm`  
+**GitHub Repository:** `https://github.com/sherazijaz5041-glitch/devops-midterm`  
 
 ---
 
@@ -31,7 +31,7 @@ This project is an automated **Assignment Submission Portal** developed for the 
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/sheraz112/devops-midterm.git
+git clone https://github.com/sherazijaz5041-glitch/devops-midterm.git
 cd devops-midterm
 
 # Install dependencies
@@ -139,7 +139,7 @@ Set the tunnel URL (e.g. `https://sheraz-midterm-receiver.loca.lt/report`) in yo
 ### Bonus 1: GitHub Pages Conditional Deployment
 - Go to **Settings > Pages** in your GitHub repository.
 - Under **Build and deployment > Source**, select **GitHub Actions**.
-- Pushes to `main` will automatically deploy `./public` when and only when tests pass!
+- Your portal demo will be live at: `https://sherazijaz5041-glitch.github.io/devops-midterm/`
 
 ### Bonus 2: Automated Email Reports
 Configure the following Repository Secrets (**Settings > Secrets and variables > Actions**):

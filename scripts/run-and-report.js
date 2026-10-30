@@ -79,7 +79,7 @@ if (rawResults && Array.isArray(rawResults.testResults)) {
 }
 
 const reportPayload = {
-  repository: process.env.GITHUB_REPOSITORY || 'sheraz112/devops-midterm',
+  repository: process.env.GITHUB_REPOSITORY || 'sherazijaz5041-glitch/devops-midterm',
   branch: getGitBranch(),
   commitSha: getGitCommitSha(),
   pipelineRunId: process.env.GITHUB_RUN_ID || 'local_run_' + Date.now(),

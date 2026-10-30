@@ -13,7 +13,7 @@ describe('CSC418 DevOps Midterm: Assignment Submission Portal Test Suite', () =>
       studentName: 'Muhammad Sheraz',
       regNo: 'FA23-BSE-065',
       assignmentTitle: 'CSC418 DevOps Midterm Lab',
-      submissionUrl: 'https://github.com/sheraz112/devops-midterm'
+      submissionUrl: 'https://github.com/sherazijaz5041-glitch/devops-midterm'
     };
 
     // 1. Submit valid assignment
@@ -25,7 +25,7 @@ describe('CSC418 DevOps Midterm: Assignment Submission Portal Test Suite', () =>
     expect(postRes.body.success).toBe(true);
     expect(postRes.body.submission).toBeDefined();
     expect(postRes.body.submission.regNo).toBe('FA23-BSE-065');
-    expect(postRes.body.submission.submissionUrl).toBe('https://github.com/sheraz112/devops-midterm');
+    expect(postRes.body.submission.submissionUrl).toBe('https://github.com/sherazijaz5041-glitch/devops-midterm');
 
     // 2. Verify submission appears in the submission list
     const getRes = await request(app)
@@ -38,7 +38,7 @@ describe('CSC418 DevOps Midterm: Assignment Submission Portal Test Suite', () =>
     const saved = getRes.body.submissions.find(s => s.regNo === 'FA23-BSE-065');
     expect(saved).toBeDefined();
     expect(saved.studentName).toBe('Muhammad Sheraz');
-    expect(saved.submissionUrl).toBe('https://github.com/sheraz112/devops-midterm');
+    expect(saved.submissionUrl).toBe('https://github.com/sherazijaz5041-glitch/devops-midterm');
   });
 
   // TEST CASE 2 (Mandatory Requirement):
@@ -48,7 +48,7 @@ describe('CSC418 DevOps Midterm: Assignment Submission Portal Test Suite', () =>
       studentName: 'Muhammad Sheraz',
       // regNo is omitted
       assignmentTitle: 'CSC418 DevOps Midterm Lab',
-      submissionUrl: 'https://github.com/sheraz112/devops-midterm'
+      submissionUrl: 'https://github.com/sherazijaz5041-glitch/devops-midterm'
     };
 
     const postRes = await request(app)
