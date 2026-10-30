@@ -1,15 +1,15 @@
 {
   "repository": "sherazijaz5041-glitch/devops-midterm",
   "branch": "main",
-  "commitSha": "aa2e8be837a65e7d9e36263016052006f731e8e6",
-  "pipelineRunId": "local_run_1793336514880",
+  "commitSha": "a4b0c0cbd50ebffc2aadb669b61f5e4149eb7a5d",
+  "pipelineRunId": "local_run_1793336619967",
   "pipelineRunNumber": "1",
-  "executionTimestamp": "2026-10-30T05:01:54.880Z",
-  "overallStatus": "PASSED",
+  "executionTimestamp": "2026-10-30T05:03:39.967Z",
+  "overallStatus": "FAILED",
   "summary": {
     "total": 3,
-    "passed": 3,
-    "failed": 0
+    "passed": 2,
+    "failed": 1
   },
   "tests": [
     {
@@ -17,20 +17,20 @@
       "fullName": "CSC418 DevOps Midterm: Assignment Submission Portal Test Suite TestCase 1: Complete details and a valid submission URL saves and appears in list",
       "result": "passed",
       "failureMessage": null,
-      "durationMs": 188
+      "durationMs": 46
     },
     {
       "name": "TestCase 2: Missing registration number is rejected with a validation message",
       "fullName": "CSC418 DevOps Midterm: Assignment Submission Portal Test Suite TestCase 2: Missing registration number is rejected with a validation message",
       "result": "passed",
       "failureMessage": null,
-      "durationMs": 9
+      "durationMs": 10
     },
     {
       "name": "TestCase 3: Invalid submission URL is rejected and is not saved",
       "fullName": "CSC418 DevOps Midterm: Assignment Submission Portal Test Suite TestCase 3: Invalid submission URL is rejected and is not saved",
-      "result": "passed",
-      "failureMessage": null,
+      "result": "failed",
+      "failureMessage": "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: 400\nReceived: 201\n    at Object.toBe (C:\\Users\\PAK\\Desktop\\Devops lab\\midterm-portal\\tests\\submission.test.js:81:28)\n    at processTicksAndRejections (node:internal/process/task_queues:103:5)",
       "durationMs": 8
     }
   ]
