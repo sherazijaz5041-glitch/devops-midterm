@@ -67,9 +67,9 @@ jobs:
         run: python scripts/send_email_report.py
 
   deploy-pages:
-    name: Conditional Deploy to GitHub Pages (Bonus Task)
+    name: Deploy to GitHub Pages (Bonus Task)
     needs: test-and-report
-    if: github.ref == 'refs/heads/main' && success()
+    if: always() && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -81,7 +81,6 @@ jobs:
 
       - name: Setup GitHub Pages
         id: pages
-        continue-on-error: true
         uses: actions/configure-pages@v5
 
       - name: Upload Static Frontend Artifact
