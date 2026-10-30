@@ -1,0 +1,37 @@
+{
+  "repository": "sheraz112/devops-midterm",
+  "branch": "main",
+  "commitSha": "local-dev-sha",
+  "pipelineRunId": "local_run_1793333066036",
+  "pipelineRunNumber": "1",
+  "executionTimestamp": "2026-10-30T04:04:26.036Z",
+  "overallStatus": "PASSED",
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0
+  },
+  "tests": [
+    {
+      "name": "TestCase 1: Complete details and a valid submission URL saves and appears in list",
+      "fullName": "CSC418 DevOps Midterm: Assignment Submission Portal Test Suite TestCase 1: Complete details and a valid submission URL saves and appears in list",
+      "result": "passed",
+      "failureMessage": null,
+      "durationMs": 88
+    },
+    {
+      "name": "TestCase 2: Missing registration number is rejected with a validation message",
+      "fullName": "CSC418 DevOps Midterm: Assignment Submission Portal Test Suite TestCase 2: Missing registration number is rejected with a validation message",
+      "result": "passed",
+      "failureMessage": null,
+      "durationMs": 17
+    },
+    {
+      "name": "TestCase 3: Invalid submission URL is rejected and is not saved",
+      "fullName": "CSC418 DevOps Midterm: Assignment Submission Portal Test Suite TestCase 3: Invalid submission URL is rejected and is not saved",
+      "result": "passed",
+      "failureMessage": null,
+      "durationMs": 18
+    }
+  ]
+}

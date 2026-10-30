@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# Temporary Jest output
+jest-raw.json
+
+# Local data cache (keep clean in git)
+data/submissions.json
+
+# OS specific files
+Thumbs.db
+.DS_Store

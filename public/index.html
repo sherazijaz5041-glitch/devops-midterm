@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Submission Portal | CSC418 DevOps Midterm</title>
+  <meta name="description" content="Automated Assignment Submission Portal with Continuous Integration and Real-time Test Reporting for CSC418 DevOps Midterm Examination.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-glow top-left"></div>
+  <div class="background-glow bottom-right"></div>
+
+  <header class="app-header">
+    <div class="header-container">
+      <div class="logo-group">
+        <div class="logo-icon">🚀</div>
+        <div>
+          <h1>DevOps Assignment Portal</h1>
+          <p class="subtitle">CSC418 DevOps Midterm • CI/CD Automated Testing Pipeline</p>
+        </div>
+      </div>
+      <div class="status-badges">
+        <span class="badge badge-student">FA23-BSE-065</span>
+        <span id="systemModeBadge" class="badge badge-mode">Connecting...</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <!-- Left Column: Submission Form -->
+    <section class="card form-card">
+      <div class="card-header">
+        <div class="card-icon">📝</div>
+        <div>
+          <h2>Submit Assignment</h2>
+          <p class="card-desc">Enter your details and public code repository / submission URL.</p>
+        </div>
+      </div>
+
+      <form id="submissionForm" novalidate>
+        <div class="form-group">
+          <label for="studentName">Student Full Name <span class="required">*</span></label>
+          <input 
+            type="text" 
+            id="studentName" 
+            name="studentName" 
+            placeholder="e.g. Muhammad Sheraz" 
+            required 
+            autocomplete="name"
+          >
+          <span class="field-error" id="studentNameError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="regNo">Registration Number <span class="required">*</span></label>
+          <input 
+            type="text" 
+            id="regNo" 
+            name="regNo" 
+            placeholder="e.g. FA23-BSE-065" 
+            required
+          >
+          <span class="field-error" id="regNoError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="assignmentTitle">Assignment Title <span class="required">*</span></label>
+          <input 
+            type="text" 
+            id="assignmentTitle" 
+            name="assignmentTitle" 
+            placeholder="e.g. Midterm Lab Assignment" 
+            required
+          >
+          <span class="field-error" id="assignmentTitleError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="submissionUrl">Submission URL <span class="required">*</span></label>
+          <input 
+            type="url" 
+            id="submissionUrl" 
+            name="submissionUrl" 
+            placeholder="https://github.com/sheraz112/midterm-portal" 
+            required
+          >
+          <span class="field-hint">Must begin with <code>http://</code> or <code>https://</code></span>
+          <span class="field-error" id="submissionUrlError"></span>
+        </div>
+
+        <div id="formAlert" class="alert hidden" role="alert"></div>
+
+        <button type="submit" id="submitBtn" class="btn btn-primary">
+          <span class="btn-text">Submit Assignment</span>
+          <span class="btn-spinner hidden"></span>
+        </button>
+      </form>
+    </section>
+
+    <!-- Right Column: Live Submissions Feed -->
+    <section class="card feed-card">
+      <div class="card-header">
+        <div class="card-icon">📋</div>
+        <div>
+          <div class="feed-title-wrap">
+            <h2>Recorded Submissions</h2>
+            <span id="submissionCount" class="counter-pill">0</span>
+          </div>
+          <p class="card-desc">Real-time verified submissions stored in the portal.</p>
+        </div>
+      </div>
+
+      <div class="feed-controls">
+        <button id="refreshBtn" class="btn-sm btn-ghost" title="Refresh List">
+          🔄 Refresh
+        </button>
+      </div>
+
+      <div id="submissionsList" class="submissions-list">
+        <div class="empty-state" id="emptyState">
+          <div class="empty-icon">📭</div>
+          <p>No submissions recorded yet.</p>
+          <span>Fill in the form on the left to add your first submission.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>CSC418 DevOps Midterm Examination • Instructor Test Result Receiver & CI Pipeline Integration</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

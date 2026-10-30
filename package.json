@@ -1,0 +1,36 @@
+{
+  "name": "devops-assignment-portal",
+  "version": "1.0.0",
+  "description": "CSC418 DevOps Lab Midterm - Assignment Submission Portal with Automated Testing & Local Report Delivery",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest --runInBand",
+    "test:ci": "node scripts/run-and-report.js",
+    "receiver": "node receiver.js"
+  },
+  "keywords": [
+    "devops",
+    "ci-cd",
+    "github-actions",
+    "testing",
+    "automated-reporting"
+  ],
+  "author": "Muhammad Sheraz (FA23-BSE-065)",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "verbose": true
+  }
+}
